@@ -118,7 +118,7 @@ fun RegisterScreen(){
             modifier = Modifier.width(350.dp),
             leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
             label = {Text(text = "Password")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
                 unfocusedBorderColor = neworange,
                 focusedBorderColor = Color.DarkGray,
@@ -134,7 +134,7 @@ fun RegisterScreen(){
             modifier = Modifier.width(350.dp),
             leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
             label = {Text(text = "Confirm Password")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
                 unfocusedBorderColor = neworange,
                 focusedBorderColor = Color.DarkGray,

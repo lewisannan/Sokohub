@@ -26,9 +26,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -36,9 +41,11 @@ import com.darrius.sokohub.R
 import com.darrius.sokohub.ui.theme.neworange
 
 @Composable
-fun ServiceScreen(){
+fun LoginScreen(){
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .paint(painterResource(R.drawable.ground), contentScale = ContentScale.FillBounds),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
 
@@ -50,9 +57,22 @@ fun ServiceScreen(){
             contentDescription = "",
             modifier = Modifier.size(150.dp),
         )
+
         Spacer(modifier = Modifier.height(20.dp))
 
+        Text(
+            text = "Welcome Back!!",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+        )
+
+
+
+
+        //Variables
+
         var email by remember { mutableStateOf("") }
+
         var password by remember { mutableStateOf("") }
 
 
@@ -75,18 +95,19 @@ fun ServiceScreen(){
         Spacer(modifier = Modifier.height(5.dp))
         OutlinedTextField(
             value = password,
-            onValueChange = {password = it},
+            onValueChange = {password = it },
             modifier = Modifier.width(350.dp),
             leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "")},
             label = {Text(text = "Password")},
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = OutlinedTextFieldDefaults.colors(
                 unfocusedBorderColor = neworange,
                 focusedBorderColor = Color.DarkGray,
                 unfocusedLeadingIconColor = neworange
 
+            ),
+            visualTransformation = PasswordVisualTransformation()
 
-            )
         )
 
         Spacer(modifier = Modifier.height(5.dp))
@@ -114,6 +135,6 @@ fun ServiceScreen(){
 }
 @Preview(showBackground = true)
 @Composable
-fun ServiceScreenPreview(){
-    ServiceScreen()
+fun LoginScreenPreview(){
+    LoginScreen()
 }
