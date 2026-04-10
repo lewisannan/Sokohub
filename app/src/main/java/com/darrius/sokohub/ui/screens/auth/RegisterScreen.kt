@@ -22,6 +22,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -44,6 +45,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.darrius.sokohub.R
+import com.darrius.sokohub.navigation.ROUT_LOGIN
 import com.darrius.sokohub.ui.theme.neworange
 
 @Composable
@@ -158,10 +160,15 @@ fun RegisterScreen(navController: NavController){
 
 
         }
-        Text(
-            text = "Already have an account? Login",
-            fontSize = 20.sp,
-        )
+
+        TextButton(onClick = { navController.navigate(ROUT_LOGIN) }) {
+            Text(
+                text = "Already have an account? Login",
+                fontSize = 20.sp,
+            )
+
+        }
+
     }
 
 

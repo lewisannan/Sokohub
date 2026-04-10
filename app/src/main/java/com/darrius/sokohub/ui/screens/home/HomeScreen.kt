@@ -44,6 +44,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.darrius.sokohub.R
+import com.darrius.sokohub.navigation.ROUT_INTENT
 import com.darrius.sokohub.ui.theme.neworange
 import kotlinx.serialization.Contextual
 
@@ -130,7 +131,7 @@ fun HomeScreen(navController: NavController){
                     modifier = Modifier.padding(start = 20.dp),
                 )
                 Button(
-                    onClick = {},
+                    onClick = { navController.navigate({ ROUT_INTENT })},
                     colors = ButtonDefaults.buttonColors(neworange),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.padding(start = 20.dp),
