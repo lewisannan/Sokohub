@@ -4,15 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.darrius.sokohub"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    namespace = "com.lewis.sokohub"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.darrius.sokohub"
+        applicationId = "com.lewis.sokohub"
         minSdk = 23
         targetSdk = 36
         versionCode = 1
