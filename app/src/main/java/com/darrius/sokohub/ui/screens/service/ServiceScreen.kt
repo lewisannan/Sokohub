@@ -9,19 +9,18 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun ServiceScreen(navController: NavController){
+fun HomeScreen(navController: NavController){
+
     Column(
         modifier = Modifier.fillMaxSize()
-
-
     ) {
 
+
     }
-
-
 }
+
 @Preview(showBackground = true)
 @Composable
-fun ServiceScreenPreview(){
-    ServiceScreen(rememberNavController())
+fun HomeScreenPreview(){
+    HomeScreen(rememberNavController())
 }
