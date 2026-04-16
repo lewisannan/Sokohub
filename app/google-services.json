@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057893207043",
+    "project_id": "sokohub-cf4eb",
+    "storage_bucket": "sokohub-cf4eb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057893207043:android:1d7a78b7afc7122cb85236",
+        "android_client_info": {
+          "package_name": "com.lewis.sokohub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZye1Z4cg4h9GAsKmrkfBhF5SWCo8lu68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
