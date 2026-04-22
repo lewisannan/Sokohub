@@ -1,0 +1,11 @@
+package com.lewis.sokohub.models
+
+data class Products(
+    var id: String? = null,
+    val name: String? = null,
+    val category: String? = null,
+    val brand: String? = null,
+    val price: String? = null,
+    val description: String? = null,
+    val imageUrl: String? = null
+)
