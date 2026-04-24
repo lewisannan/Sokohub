@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.lewis.sokohub"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.lewis.sokohub"
